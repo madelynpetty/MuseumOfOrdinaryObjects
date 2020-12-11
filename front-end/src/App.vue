@@ -15,6 +15,7 @@
   </div>
   <div class="footer">
     <router-link to="/admin">Admin</router-link>
+    <p><a href="https://github.com/BYU-CS-260-Winter-2020/lab-4-museum-of-ordinary-objects-madelynjohnsonnn.git">GITHUB LINK</a></p>
   </div>
 </div>
 </template>
