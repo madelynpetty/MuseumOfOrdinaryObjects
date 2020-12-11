@@ -82,9 +82,14 @@ export default {
         let r1 = await axios.post('/api/photos', formData);
         let r2 = await axios.post('/api/items', {
           title: this.title,
-          path: r1.data.path
+          path: r1.data.path,
+          text: this.description,
         });
         this.addItem = r2.data;
+
+        this.title = "";
+        this.description = "";
+        this.file = null;
       } catch (error) {
         // console.log(error);
       }
@@ -116,6 +121,7 @@ export default {
       try {
         await axios.put("/api/items/" + item._id, {
           title: this.findItem.title,
+          text: this.findItem.text,
         });
         this.findItem = null;
         this.getItems();

@@ -76,7 +76,7 @@ app.get('/api/items', async (req, res) => {
 // Delete Item
 app.delete('/api/items/:id', async (req, res) => {
   try {
-    await item.deleteOne({
+    await Item.deleteOne({
       _id: req.params.id
     });
     res.sendStatus(200);
